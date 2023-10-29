@@ -202,17 +202,6 @@ input[type="date"] {
 }
 
 
-/* Filtros */
-.filter-section {
-  padding: 1.5rem;
-  border: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  border-radius: 8px;
-}
-
 /* Medias */
 @media screen and (max-width: 768px) {
   .fx-hide-xs {

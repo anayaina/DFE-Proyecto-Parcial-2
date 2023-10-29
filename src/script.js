@@ -292,34 +292,6 @@ function updateTask(task) {
     });
 }
 
-function initFilterButtonsHandler() {
-  document.getElementById('filter-form').addEventListener('submit', event => {
-    event.preventDefault();
-    searchTasks();
-  });
-  document.getElementById('reset-filters').addEventListener('click', () => clearTasks());
-}
-
-function clearTasks() {
-  document.querySelector('select.filter-field').selectedIndex = 0;
-  document.querySelectorAll('input.filter-field').forEach(input => input.value = '');
-  displayClearTasksView();
-}
-
-function resetTasks() {
-  document.querySelector('select.filter-field').selectedIndex = 0;
-  document.querySelectorAll('input.filter-field').forEach(input => input.value = '');
-  searchTasks();
-}
-
-function searchTasks() {
-  const title = document.getElementById('title-filtro').value;
-  const priority = document.getElementById('priority-filtro').value;
-  const dueDate = document.getElementById('fecha-filtro').value;
-
-  getTasksData(title, priority, dueDate);
-}
-
 initAddTaskButtonsHandler();
 getTasksData();
 
